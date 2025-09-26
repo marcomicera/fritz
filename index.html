@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collapsible Sections</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-4">
+  <div class="max-w-3xl mx-auto space-y-6">
+    
+    <!-- Category One -->
+    <div class="bg-white rounded-2xl shadow p-6" x-data="{ openA: false, openB: false }">
+      <h2 class="text-xl font-semibold mb-4 text-gray-700">Category One</h2>
+      
+      <!-- Section A -->
+      <div class="mb-4">
+        <button @click="openA = !openA" class="w-full flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-700">A</span>
+          <svg :class="{'rotate-180': openA}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div x-show="openA" x-collapse class="mt-3 pl-6 pr-2 text-gray-700 leading-relaxed">
+          test
+        </div>
+      </div>
+
+      <!-- Section B -->
+      <div>
+        <button @click="openB = !openB" class="w-full flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-700">B</span>
+          <svg :class="{'rotate-180': openB}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div x-show="openB" x-collapse class="mt-3 pl-6 pr-2 text-gray-700 leading-relaxed">
+          test
+        </div>
+      </div>
+    </div>
+    
+    <!-- Category Two -->
+    <div class="bg-white rounded-2xl shadow p-6" x-data="{ openC: false }">
+      <h2 class="text-xl font-semibold mb-4 text-gray-700">Category Two</h2>
+      
+      <!-- Section C -->
+      <div>
+        <button @click="openC = !openC" class="w-full flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
+          <span class="font-medium text-gray-700">C</span>
+          <svg :class="{'rotate-180': openC}" class="w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div x-show="openC" x-collapse class="mt-3 pl-6 pr-2 text-gray-700 leading-relaxed">
+          test
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
+
