@@ -109,7 +109,7 @@
       <h2 class="text-xl font-semibold mb-4 text-gray-700">Key fob</h2>
 
       <!-- Locked out? -->
-      <!-- <div class="mb-4">
+      <div class="mb-4">
         <button @click="openLockedOut = !openLockedOut"
           class="w-full flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition">
           <span class="font-medium text-gray-700">Locked yourself out?</span>
@@ -122,9 +122,18 @@
           x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
           x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
           x-transition:leave-end="opacity-0 -translate-y-2" class="mt-3 pl-6 pr-2 text-gray-700 leading-relaxed">
-
+          <ol class="list-decimal list-inside space-y-2">
+            <li>
+              Inform the facilty manager (Hausmeister) at
+              <a href="tel:+491624281000" class="text-indigo-600 hover:underline">+491624281000</a>
+            </li>
+            <li>
+              If necessary, call the Hoffmann locksmith (Schlüsseldienst) at
+              <a href="tel:+493042161647" class="text-indigo-600 hover:underline">+493042161647</a>
+            </li>
+          </ol>
         </div>
-      </div> -->
+      </div>
 
       <!-- Lost your keys? -->
       <div class="mb-4">
